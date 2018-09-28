@@ -176,7 +176,7 @@ readBaliseA.addEventListener("click", function() {
     event.preventDefault(); //evenement par defaut de la balise et on l'annule
     let paragrapheRead = document.querySelectorAll("#services figcaption p")[0];
     if (readBaliseA.innerHTML == "Read More »") {
-        paragrapheRead.innerHTML += "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem quidem mollitia dolores accusantium id dolor rem, ex provident dolore at, harum blanditiis aut quos excepturi hic non corporis officia repudiandae?";
+        paragrapheRead.innerHTML += " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem quidem mollitia dolores accusantium id dolor rem, ex provident dolore at, harum blanditiis aut quos excepturi hic non corporis officia repudiandae?";
         readBaliseA.innerHTML = "Read Less &raquo;";
     } else {
         paragrapheRead.innerHTML = textReadBaliseA;
