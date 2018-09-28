@@ -146,3 +146,42 @@ for (let i = 0; i < dataImagesHtml.length; i++) {
 }
 
 //msylvestreets@yahoo.fr
+
+
+/*********************************
+ *           Exercice 5          *
+ *********************************/
+
+/* let clickReadMore = document.querySelector("figcaption footer a");
+let clickReadLess;
+let paragraphe = document.querySelector("figcaption p")
+
+
+
+clickReadMore.addEventListener("click", function() {
+    paragraphe.push()
+}) */
+
+
+
+/***************************************************
+ *           Exercice 5 - Correction mike          *
+ **************************************************/
+
+//cilbler les read more
+
+let readBaliseA = document.querySelectorAll("#services a")[0];
+let textReadBaliseA = document.querySelectorAll("#services figcaption p")[0].innerHTML;
+readBaliseA.addEventListener("click", function() {
+    event.preventDefault(); //evenement par defaut de la balise et on l'annule
+    let paragrapheRead = document.querySelectorAll("#services figcaption p")[0];
+    if (readBaliseA.innerHTML == "Read More »") {
+        paragrapheRead.innerHTML += "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem quidem mollitia dolores accusantium id dolor rem, ex provident dolore at, harum blanditiis aut quos excepturi hic non corporis officia repudiandae?";
+        readBaliseA.innerHTML = "Read Less &raquo;";
+    } else {
+        paragrapheRead.innerHTML = textReadBaliseA;
+        readBaliseA.innerHTML = "Read More »"
+    }
+
+
+})
