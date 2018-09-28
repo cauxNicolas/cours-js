@@ -131,17 +131,18 @@ for (let i = 0; i < dataImagesHtml.length; i++) {
 
 
 let tabimageArticle = ["https://www.australieautrement.com/wp-content/uploads/2016/08/roadsign-australie-280x180.jpg",
-    "https://www.australieautrement.com/wp-content/uploads/2016/08/gibb-river-road-copyright-TOURISM-WA-280x180.jpg",
-    "http://img.over-blog-kiwi.com/0/92/98/17/20140712/ob_477053_8.jpg"
-]
+        "https://www.australieautrement.com/wp-content/uploads/2016/08/gibb-river-road-copyright-TOURISM-WA-280x180.jpg",
+        "http://img.over-blog-kiwi.com/0/92/98/17/20140712/ob_477053_8.jpg"
+    ] //tableau des images
 
 
 let dataImagesHtml = document.querySelectorAll("#services img")
+    //récuperation de outes nos balises img se trouvant dans l'ID services
     //console.log(dataImagesHtml);
-for (let i = 0; i < dataImagesHtml.length; i++) {
+for (let i = 0; i < dataImagesHtml.length; i++) { // Boucle pour parcourir notre tableau d'img (dataImagesHtml) afin de mettre un evenement au click à chacune d'entre elle
     dataImagesHtml[i].addEventListener("click", function() {
         //console.log(dataImagesHtml[i]);
-        dataImagesHtml[i].src = tabimageArticle[i];
+        dataImagesHtml[i].src = tabimageArticle[i]; //Modification de la source de l'image
     })
 }
 
@@ -170,12 +171,12 @@ clickReadMore.addEventListener("click", function() {
 
 //cilbler les read more
 
-let readBaliseA = document.querySelectorAll("#services a")[0];
-let textReadBaliseA = document.querySelectorAll("#services figcaption p")[0].innerHTML;
+let readBaliseA = document.querySelectorAll("#services a")[0]; //Recuperationdes balises "a" dans l'ID services et affectation de a premiere balise "a" dans la variable(readBaliseA)
+let textReadBaliseA = document.querySelectorAll("#services figcaption p")[0].innerHTML; //creation d'une variable pour sauvegarder le texte original de la balise "p"
 readBaliseA.addEventListener("click", function() {
     event.preventDefault(); //evenement par defaut de la balise et on l'annule
     let paragrapheRead = document.querySelectorAll("#services figcaption p")[0];
-    if (readBaliseA.innerHTML == "Read More »") {
+    if (readBaliseA.innerHTML == "Read More »") { //on garde le texte d'origine "read more"
         paragrapheRead.innerHTML += " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem quidem mollitia dolores accusantium id dolor rem, ex provident dolore at, harum blanditiis aut quos excepturi hic non corporis officia repudiandae?";
         readBaliseA.innerHTML = "Read Less &raquo;";
     } else {
@@ -185,3 +186,37 @@ readBaliseA.addEventListener("click", function() {
 
 
 })
+
+
+
+/* let personne = {
+    nom: "Caux",
+    prenom: "Nico",
+    dateNaiss: "22 april 1982",
+    children: [{
+        nom: "Caux",
+        prenom: "Nico junior",
+        dateNaiss: "22-02-20",
+    }, {
+        nom: "Caux",
+        prenom: "Linda junior",
+        dateNaiss: "22-02-20",
+    }], */
+
+//EXO
+/*     age: function() {
+        let date = new Date();
+        age = personne[dateNaiss] - date
+        console.log(age);
+    } */
+
+//EXO - CORRECTION
+/*     age: function() {
+        let anniversaire = new Date(this.dateNaiss)
+        return new Number((new Date().getTime() - anniversaire.getTime()) / 31536000000).toFixed(0)
+    }
+
+}
+
+console.log(personne)
+console.log(personne.age()) */
